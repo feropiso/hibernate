@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 1 de nov. de 2022 07:17:19 by Hibernate Tools 4.3.6.Final -->
+<hibernate-mapping>
+    <class name="com.abctreinamentos.Pagamentos" table="pagamentos" catalog="formacaojava" optimistic-lock="version">
+        <id name="idPagamento" type="java.lang.Integer">
+            <column name="id_pagamento" />
+            <generator class="identity" />
+        </id>        
+        <property name="fk_cliente" type="java.lang.Integer">
+            <column name="fk_cliente" not-null="true" />
+        </property>
+        <property name="fk_curso" type="java.lang.Integer">
+            <column name="fk_curso" not-null="true" />
+        </property>
+        <property name="data" type="date">
+            <column name="data" not-null="true" />
+        </property>        
+    </class>
+</hibernate-mapping>
